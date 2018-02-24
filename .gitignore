@@ -7,3 +7,9 @@
 /build
 /captures
 .externalNativeBuild
+/app/
+/build.gradle
+/app/build.gradle
+app/libs/
+xmlstyler/libs/
+xmlstyler/src/main/res/drawable/

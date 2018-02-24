@@ -26,7 +26,7 @@ public  class AnnotationProcessor {
                         textView.setText(style.text());
 
                         if(style.fontSize()>0)
-                            textView.setTextSize(TypedValue.COMPLEX_UNIT_IN,style.fontSize());
+                            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, style.fontSize());
                         if(!style.fontLocation().isEmpty()){
                             Typeface type = Typeface.createFromAsset(context.getAssets(),style.fontLocation());
                             textView.setTypeface(type);
