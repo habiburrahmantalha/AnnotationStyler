@@ -10,8 +10,10 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Style {
     String text() default "";
-    float fontSize() default 0f;
-    String fontLocation() default "";
 
-    String textColor() default "";
+    float size() default 0f;
+
+    String font() default "";
+
+    String color() default "";
 }

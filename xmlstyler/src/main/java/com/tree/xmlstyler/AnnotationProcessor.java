@@ -25,14 +25,14 @@ public  class AnnotationProcessor {
                         if(!style.text().isEmpty())
                         textView.setText(style.text());
 
-                        if(style.fontSize()>0)
-                            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, style.fontSize());
-                        if(!style.fontLocation().isEmpty()){
-                            Typeface type = Typeface.createFromAsset(context.getAssets(),style.fontLocation());
+                        if (style.size() > 0)
+                            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, style.size());
+                        if (!style.font().isEmpty()) {
+                            Typeface type = Typeface.createFromAsset(context.getAssets(), style.font());
                             textView.setTypeface(type);
                         }
-                        if (!style.textColor().isEmpty()) {
-                            textView.setTextColor(Color.parseColor(style.textColor()));
+                        if (!style.color().isEmpty()) {
+                            textView.setTextColor(Color.parseColor(style.color()));
                         }
                     }
                     else if(field.getType().isAssignableFrom(String.class)){

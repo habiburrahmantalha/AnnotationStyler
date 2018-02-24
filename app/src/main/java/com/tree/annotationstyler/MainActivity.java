@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     @Style(text = "Hello!!")
     String title;
-    @Style(text = " Hello", fontSize = 20f, textColor = "#000000")
+    @Style(text = " Hello", size = 20f, color = "#888000")
     TextView tv;
 
     @Override
