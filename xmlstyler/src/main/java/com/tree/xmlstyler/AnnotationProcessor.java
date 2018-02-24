@@ -1,7 +1,7 @@
 package com.tree.xmlstyler;
 
-import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.widget.TextView;
@@ -30,6 +30,9 @@ public  class AnnotationProcessor {
                         if(!style.fontLocation().isEmpty()){
                             Typeface type = Typeface.createFromAsset(context.getAssets(),style.fontLocation());
                             textView.setTypeface(type);
+                        }
+                        if (!style.textColor().isEmpty()) {
+                            textView.setTextColor(Color.parseColor(style.textColor()));
                         }
                     }
                     else if(field.getType().isAssignableFrom(String.class)){
